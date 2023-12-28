@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class AnimationSprite : MonoBehaviour
+public class AnimatedSprite : MonoBehaviour
 {
     public Sprite[] sprites = new Sprite[0];
     public float animationTime = 0.25f;
@@ -32,20 +32,17 @@ public class AnimationSprite : MonoBehaviour
 
     private void Advance()
     {
-        if (!spriteRenderer.enabled)
-        {
+        if (!spriteRenderer.enabled) {
             return;
         }
 
         animationFrame++;
 
-        if (animationFrame >= sprites.Length && loop)
-        {
+        if (animationFrame >= sprites.Length && loop) {
             animationFrame = 0;
         }
 
-        if (animationFrame >= 0 && animationFrame < sprites.Length)
-        {
+        if (animationFrame >= 0 && animationFrame < sprites.Length) {
             spriteRenderer.sprite = sprites[animationFrame];
         }
     }
