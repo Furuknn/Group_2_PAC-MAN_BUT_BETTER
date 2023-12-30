@@ -21,9 +21,12 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null) { 
+        if (Instance != null)
+        {
             DestroyImmediate(gameObject);
-        } else {
+        }
+        else
+        {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -62,7 +65,7 @@ public class GameManager : MonoBehaviour
     private void ResetState()
     {
         for (int i = 0; i < ghosts.Length; i++) {
-            ghosts[i].gameObject.SetActive(true);
+            this.ghosts[i].ResetState();
         }
 
         pacmanscr.ResetState();

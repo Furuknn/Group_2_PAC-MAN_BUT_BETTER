@@ -1297,6 +1297,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1833188100445256099, guid: aaaad7a62bd3d534ca36319e85583ac7, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1575749649}
     - target: {fileID: 4701921794076604418, guid: aaaad7a62bd3d534ca36319e85583ac7, type: 3}
       propertyPath: m_Name
       value: Ghost_Clyde
@@ -1520,6 +1524,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6397341071260469407, guid: 1de501a38b8c4e54bbd6b7a0367905c0, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1575749649}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7550,6 +7558,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4480721489915403739, guid: aa54a4041c576d74e9abdf1073448263, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1575749649}
     - target: {fileID: 4797357303023453587, guid: aa54a4041c576d74e9abdf1073448263, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7610,6 +7622,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d0a2c5d43813649babf2430742dae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1575749649 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6038318316045854524, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
+  m_PrefabInstance: {fileID: 6038318316664210395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1597613095 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6522250511177725107, guid: 8b03e82329559544e85df2033c1df568, type: 3}
@@ -10294,6 +10311,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6522250511177725107, guid: 8b03e82329559544e85df2033c1df568, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1575749649}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10315,6 +10336,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 3f03d58ee2fba7344b6cbdccc27714ea, type: 2}
+    - target: {fileID: 6038318316045854515, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
+      propertyPath: animationTime
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854524, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
       propertyPath: m_RootOrder
       value: 4
