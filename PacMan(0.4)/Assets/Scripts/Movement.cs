@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D))] //Gameobject'de bu component'ýn mutlaka olmasý gerektiðini bildirir. Eðer bu component zaten yoksa bu kodla otomatik olarak oluþturulur.
 public class Movement : MonoBehaviour
 {
     public float speed = 8f;

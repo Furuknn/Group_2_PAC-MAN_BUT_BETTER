@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [SerializeField] private Ghost[] ghosts;
-    [SerializeField] private Pacman pacman;
+    [SerializeField] private Pacman pacmanscr;
     [SerializeField] private Transform pellets;
     //[SerializeField] private Text gameOverText;
     //[SerializeField] private Text scoreText;
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null) {
+        if (Instance != null) { 
             DestroyImmediate(gameObject);
         } else {
             Instance = this;
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
             ghosts[i].gameObject.SetActive(true);
         }
 
-        pacman.ResetState();
+        pacmanscr.ResetState();
     }
 
     private void GameOver()
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
             ghosts[i].gameObject.SetActive(false);
         }
 
-        pacman.gameObject.SetActive(false);
+        pacmanscr.gameObject.SetActive(false); //Oyun sona erdiðinde bu pacman scriptini deaktive ederek Pacman'in hareket etmesini engeller.
     }
 
     private void SetLives(int lives)
@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
 
     public void PacmanEaten()
     {
-        pacman.DeathSequence();
+        pacmanscr.DeathSequence();
 
         SetLives(lives - 1);
 
@@ -109,24 +109,24 @@ public class GameManager : MonoBehaviour
         ghostMultiplier++;
     }
 
-    public void PelletEaten(Pellet pellet)
+    public void PelletEaten(Pellet pellet) //yenilen noktalarý yok eder. Hepsi yendiðinde yeni rounda geçer.
     {
         pellet.gameObject.SetActive(false);
 
         if (!HasRemainingPellets())
         {
-            pacman.gameObject.SetActive(false);
+            pacmanscr.gameObject.SetActive(false);
             Invoke(nameof(NewRound), 3f);
         }
     }
 
-    public void PowerPelletEaten(PowerPellet pellet)
+    public void PowerPelletEaten(PowerPellet pellet) 
     {
         PelletEaten(pellet);
  
     }
 
-    private bool HasRemainingPellets()
+    private bool HasRemainingPellets() //haritada nokta kaldý mý kalmadý mý kontrol eder.
     {
         foreach (Transform pellet in pellets)
         {
