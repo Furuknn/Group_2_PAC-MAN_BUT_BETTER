@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3928568474087720394
+--- !u!1001 &8464074199245555930
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -58,26 +58,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3762469786107179224, guid: 1928edd4752df8f448c9f120899de601, type: 3}
       propertyPath: m_Name
-      value: Ghost_Inky
+      value: Ghost_Clyde
       objectReference: {fileID: 0}
+    - target: {fileID: 7784089870839296377, guid: 1928edd4752df8f448c9f120899de601, type: 3}
+      propertyPath: initialBehaviour
+      value: 
+      objectReference: {fileID: 644720286205009475}
     - target: {fileID: 8061900950479044668, guid: 1928edd4752df8f448c9f120899de601, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 8061900950479044668, guid: 1928edd4752df8f448c9f120899de601, type: 3}
       propertyPath: m_Color.g
-      value: 0.99215686
+      value: 0.73333335
       objectReference: {fileID: 0}
     - target: {fileID: 8061900950479044668, guid: 1928edd4752df8f448c9f120899de601, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.972549
       objectReference: {fileID: 0}
     - target: {fileID: 9044616788769789593, guid: 1928edd4752df8f448c9f120899de601, type: 3}
       propertyPath: duration
-      value: 8
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1928edd4752df8f448c9f120899de601, type: 3}
+--- !u!114 &644720286205009475 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9044616788769789593, guid: 1928edd4752df8f448c9f120899de601, type: 3}
+  m_PrefabInstance: {fileID: 8464074199245555930}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8809123315ba9c489c5b9fb777eeedd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
