@@ -158,7 +158,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < ghosts.Length; i++)
         {
-            ghosts[i].vulnerablescr.Enable(pellet.duration);
+            ghosts[i].vulnerablescr.TimedEnable(pellet.duration);
         }
 
         PelletEaten(pellet);

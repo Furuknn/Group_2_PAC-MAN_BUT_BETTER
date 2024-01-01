@@ -6,10 +6,9 @@ public class Ghost : MonoBehaviour
 
     public Movement movementscr {  get; private set; }
     public GhostSpawn spawnscr { get; private set; }
-    public GhostChase chasescr { get; private set; }
-    public GhostScatter scatterscr { get; private set; }
     public GhostVulnerable vulnerablescr { get; private set; }
     public BlinkyBehaviour blinkyBehaviourscr { get; private set; }
+    public BlinkyChase blinkyChasescr { get; private set; }
 
     public GhostBehaviour initialBehaviour;
 
@@ -20,14 +19,19 @@ public class Ghost : MonoBehaviour
     {
         movementscr = GetComponent<Movement>();
         spawnscr= GetComponent<GhostSpawn>();
-        chasescr = GetComponent<GhostChase>();
-        scatterscr = GetComponent<GhostScatter>();
         vulnerablescr = GetComponent<GhostVulnerable>();
         blinkyBehaviourscr=FindObjectOfType<BlinkyBehaviour>();
+        blinkyChasescr=FindObjectOfType<BlinkyChase>();
     }
 
+    private void Update()
+    {
+        //blinkyChasescr.Enable();
+        //blinkyBehaviourscr.Enable();
+    }
     public void Start()
     {
+        blinkyChasescr.Enable();
         blinkyBehaviourscr.Enable();
         ResetState();
     }
@@ -38,8 +42,8 @@ public class Ghost : MonoBehaviour
         gameObject.SetActive(true);
 
         vulnerablescr.Disable();
-        chasescr.Disable();
-        scatterscr.Enable();
+        
+        
 
         if (spawnscr!=initialBehaviour)
         {
@@ -47,7 +51,7 @@ public class Ghost : MonoBehaviour
         }
         if (initialBehaviour!=null)
         {
-            initialBehaviour.Enable();
+            initialBehaviour.TimedEnable();
         }
     }
 

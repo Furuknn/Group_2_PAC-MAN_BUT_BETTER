@@ -8,9 +8,9 @@ public class GhostVulnerable : GhostBehaviour
     public bool eaten {  get; private set; }
 
 
-    public override void Enable(float duration)
+    public override void TimedEnable(float duration)
     {
-        base.Enable(duration);
+        base.TimedEnable(duration);
 
         body.enabled = false;
         eyes.enabled = false;
@@ -50,7 +50,7 @@ public class GhostVulnerable : GhostBehaviour
         position.z = ghostscr.transform.position.z;
         ghostscr.transform.position = position;
 
-        ghostscr.spawnscr.Enable(this.duration);
+        ghostscr.spawnscr.TimedEnable(this.duration);
 
         body.enabled = false;
         eyes.enabled = true;
@@ -68,6 +68,8 @@ public class GhostVulnerable : GhostBehaviour
     {
         ghostscr.movementscr.speedMultiplier = 1f;
         eaten = false;
+
+        ghostscr.blinkyChasescr.Enable();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

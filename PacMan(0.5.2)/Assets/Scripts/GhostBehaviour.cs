@@ -17,9 +17,14 @@ public abstract class GhostBehaviour : MonoBehaviour //"abstract" kodu, Scriptin
 
     public void Enable()
     {
-        Enable(duration);
+        this.enabled = true;
     }
-    public virtual void Enable(float duration) //"Virtual" bu metodun baþka classlarda nasýl davrandýðýný deðiþtirmeye yarayacak.
+
+    public void TimedEnable()
+    {
+        TimedEnable(duration);
+    }
+    public virtual void TimedEnable(float duration) //"Virtual" bu metodun baþka classlarda nasýl davrandýðýný deðiþtirmeye yarayacak.
     {
         this.enabled=true;
 
