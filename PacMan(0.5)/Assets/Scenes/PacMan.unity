@@ -1309,6 +1309,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1575749649}
+    - target: {fileID: 2713373191101116589, guid: aaaad7a62bd3d534ca36319e85583ac7, type: 3}
+      propertyPath: duration
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4701921794076604418, guid: aaaad7a62bd3d534ca36319e85583ac7, type: 3}
       propertyPath: m_Name
       value: Ghost_Clyde
@@ -1552,6 +1556,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1575749649}
+    - target: {fileID: 7210535238183289233, guid: 1de501a38b8c4e54bbd6b7a0367905c0, type: 3}
+      propertyPath: duration
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8773402436472783412, guid: 1de501a38b8c4e54bbd6b7a0367905c0, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -10191,6 +10199,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1575749649}
+    - target: {fileID: 7373707740230647229, guid: 8b03e82329559544e85df2033c1df568, type: 3}
+      propertyPath: duration
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10215,6 +10227,10 @@ PrefabInstance:
     - target: {fileID: 6038318316045854515, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
       propertyPath: animationTime
       value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038318316045854519, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854524, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
       propertyPath: m_RootOrder

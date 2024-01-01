@@ -6,7 +6,11 @@ public class GhostScatter : GhostBehaviour
 {
     private void OnDisable()
     {
-        ghostscr.chasescr.Enable();
+        if (!ghostscr.spawnscr.enabled)
+        {
+            ghostscr.chasescr.Enable();
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)

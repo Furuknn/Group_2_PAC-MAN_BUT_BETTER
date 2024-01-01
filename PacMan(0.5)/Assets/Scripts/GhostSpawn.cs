@@ -7,15 +7,24 @@ public class GhostSpawn : GhostBehaviour
 {
     public Transform inside,outside;
 
+    private void Start()
+    {
+        ghostscr.scatterscr.Disable();
+        ghostscr.chasescr.Disable();
+    }
+
     private void OnEnable()
     {
         StopAllCoroutines();
+        ghostscr.scatterscr.Disable();
+        ghostscr.chasescr.Disable();
     }
     private void OnDisable()
     {
         if (this.gameObject.activeSelf)
         {
             StartCoroutine(ExitTransition());
+            ghostscr.scatterscr.Enable();
         }
         
     }
